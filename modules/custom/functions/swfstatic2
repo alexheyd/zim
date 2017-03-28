@@ -1,0 +1,17 @@
+# Alias for node-static
+#
+# Example (IP is optional):
+# $ swfstatic2 [IP_ADDRESS]
+
+local port=$1
+local ip=$2
+
+if [ -z "$1" ]; then
+    port="8080"
+fi
+
+if [ -z "$2" ]; then
+    ip="10.0.31.201"
+fi
+
+static -c 1 -p $port -a $ip

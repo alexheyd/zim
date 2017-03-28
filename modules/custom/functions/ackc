@@ -1,0 +1,17 @@
+# Case insensitive ack "string" piping out to color cat
+# 
+# Example:
+# $ ack MyStringHere **/*.js
+
+local dir=$2
+
+if [ -z "$1" ]; then
+    echo "Error: String to match is required."
+    return
+fi
+
+if [ -z "$2" ]; then
+    dir="."
+fi
+
+ack -i $1 $dir | pygmentize -O style=twilight -f console256 -g

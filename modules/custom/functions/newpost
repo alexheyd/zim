@@ -1,0 +1,14 @@
+# Alias for creating Jekyll blog posts
+
+if [ -z "$1" ]; then
+    echo "Error: Blog post title required."
+    return
+fi
+
+local title=$1
+local date=$(date +%Y-%m-%d)
+local timestamp=$(date +%T)
+local filename="$date-$title.md"
+local source_file="${ZDOTDIR:-$HOME}/.zprezto/modules/alex/templates/newpost.md"
+
+sed -e "s;%DATE%;$date;g" -e "s;%TITLE%;$title;g" -e "s;%TIMESTAMP%;$timestamp;g" $source_file > $filename

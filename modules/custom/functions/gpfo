@@ -1,0 +1,3 @@
+# Shorthand to git push origin ${branch} --force
+echo "Performing 'git push --force origin $(git-branch-current)'..."
+git push --force origin $(git-branch-current)

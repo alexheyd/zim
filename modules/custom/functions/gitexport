@@ -1,0 +1,4 @@
+# Copy directory without .git folder
+
+mkdir -p "$1"
+git archive master | tar -x -C "$1"

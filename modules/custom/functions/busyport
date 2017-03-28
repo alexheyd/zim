@@ -1,0 +1,11 @@
+# Terminates process on specified port
+# Usage: busyport 9999
+
+local port=$1
+
+if [ -z "$1" ]; then
+    echo "Port number required."
+    return;
+fi
+
+lsof -i ":$1"

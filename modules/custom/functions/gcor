@@ -1,0 +1,14 @@
+# Shorthand to update current branch
+# Usage (remote is optional):
+# gcor 1.5.1
+# -> git checkout origin releases/milestone/1.5.1
+
+local version=$1
+
+if [ -z "$1" ]; then
+    echo "Error: Release version required."
+    return
+fi
+
+echo "Performing 'git checkout releases/milestone/$version'..."
+git checkout releases/milestone/$version

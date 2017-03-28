@@ -1,0 +1,19 @@
+# Alias for node-static
+#
+# Local IP is automatically used
+#
+# Example (IP is optional):
+# $ swfstatic [PORT] [IP_ADDRESS]
+
+local port=$1
+local ip=$2
+
+if [ -z "$1" ]; then
+    port="8080"
+fi
+
+if [ -z "$2" ]; then
+    ip=$(ifconfig -a | grep inet | grep -v '127.0.0.1' | grep '10.128.1.' |  awk '{print $2}')
+fi
+
+static -c 1 -p $port -a $ip
