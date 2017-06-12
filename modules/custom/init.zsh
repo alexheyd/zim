@@ -14,6 +14,7 @@ export PATH="$PATH:$HOME/.rvm/bin:/usr/local/share/python:/usr/bin/:$HOME/.nvm:$
 # source ~/Projects/z/z.sh
 
 # Exports
+export VISUAL="atom-beta"
 export EDITOR="atom-beta"
 export GIT_EDITOR="atom-beta"
 
