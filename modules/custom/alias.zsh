@@ -51,6 +51,7 @@ alias olang="atom-beta public/assets/i18n/en-us.json"
 ###############################################################################
 alias ai="apm install"
 alias aui="apm uninstall"
+alias ab="atom-beta"
 
 ###############################################################################
 # Utilities
