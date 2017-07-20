@@ -84,6 +84,7 @@ alias eapache="atom-beta /etc/apache2/httpd.conf"
 # System
 ###############################################################################
 
+alias update_os="sudo sh -c \"softwareupdate -ia && reboot\""
 alias serve="python -m SimpleHTTPServer"
 alias rmdir="rm -rf"
 alias o="open"
