@@ -139,12 +139,14 @@ alias gfo="git fetch origin"
 alias gsc="git stash clear"
 alias cbr="git-branch-current"
 alias unstage="git reset"
-alias undoall="git reset --hard"
+alias rollback="git reset --hard"
 alias undo1="git reset --soft 'HEAD^'"
 alias undopush="git push -f origin HEAD^:master"
 alias undorebase="git reset --hard ORIG_HEAD"
 alias gdf="git diff"
 alias gprom="git pull --rebase origin master"
+
+alias delmerged='git branch --merged | egrep -v "(^\*|master|develop)" | xargs git branch -d'
 
 # need single quotes on aliases below to prevent git error in not git directories on shell startup
 # git root
@@ -156,9 +158,11 @@ alias gunignore='git update-index --no-assume-unchanged'
 ###############################################################################
 # Ember
 ###############################################################################
+alias egd="ember g delegate"
 alias egc="ember g component"
 alias egs="ember g service"
 alias egr="ember g route"
+alias edd="ember d delegate"
 alias edc="ember d component"
 alias eds="ember d service"
 alias edr="ember d route"
