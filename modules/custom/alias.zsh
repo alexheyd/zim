@@ -145,6 +145,7 @@ alias undopush="git push -f origin HEAD^:master"
 alias undorebase="git reset --hard ORIG_HEAD"
 alias gdf="git diff"
 alias gprom="git pull --rebase origin master"
+alias gcms="git commit -S -m"
 
 alias delmerged='git branch --merged | egrep -v "(^\*|master|develop)" | xargs git branch -d'
 
