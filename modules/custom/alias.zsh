@@ -9,22 +9,22 @@
 ###############################################################################
 # Suffix Aliases
 ###############################################################################
-alias -s js=atom-beta
-alias -s txt=atom-beta
-alias -s json=atom-beta
-alias -s sh=atom-beta
-alias -s html=atom-beta
-alias -s mdown=atom-beta
-alias -s log=atom-beta
-alias -s hbs=atom-beta
+alias -s js=code
+alias -s txt=code
+alias -s json=code
+alias -s sh=code
+alias -s html=code
+alias -s mdown=code
+alias -s log=code
+alias -s hbs=code
 
 
 ###############################################################################
 # Prezto
 ###############################################################################
 alias src="source ~/.zshrc"
-alias ealias="atom-beta ~/.zim/modules/custom/alias.zsh"
-alias ep="atom-beta ~/.zim"
+alias ealias="code ~/.zim/modules/custom/alias.zsh"
+alias ep="code ~/.zim"
 alias zim="cd ~/.zim"
 
 ###############################################################################
@@ -39,19 +39,19 @@ alias sf="cd ~/Sites/swordfish"
 alias sfgk="cd ~/Sites/swordfish/js/lib/gaikai"
 alias gk="cd ~/Sites/gaikai.com"
 # Mount/unmount specific VM folder
-alias mountvm="mkdir /Volumes/GitHub && mount_smbfs //alex@aheyd-pc/GitHub /Volumes/GitHub && atom-beta /Volumes/GitHub"
+alias mountvm="mkdir /Volumes/GitHub && mount_smbfs //alex@aheyd-pc/GitHub /Volumes/GitHub && code /Volumes/GitHub"
 alias umountvm="umount -f /Volumes/GitHub"
 # Update node_modules and bower_components
 alias ugh="sudo rm -rf node_modules bower_components dist tmp && bower cache clean && npm cache clean && npm i && bower i"
 alias gprd="gco develop && gpl && gco - && git pull --rebase origin develop"
-alias olang="atom-beta public/assets/i18n/en-us.json"
+alias olang="code public/assets/i18n/en-us.json"
 
 ###############################################################################
 # Atom
 ###############################################################################
 alias ai="apm install"
 alias aui="apm uninstall"
-alias ab="atom-beta"
+alias ab="code"
 
 ###############################################################################
 # Utilities
@@ -76,9 +76,9 @@ alias copyrsa="pbcopy < ~/.ssh/id_rsa.pub"
 alias restart_apache="sudo apachectl restart"
 alias start_apache="sudo apachectl start"
 alias stop_apache="sudo apachectl stop"
-alias ehosts="atom-beta /etc/hosts"
-alias evhosts="atom-beta /private/etc/apache2/extra/httpd-vhosts.conf"
-alias eapache="atom-beta /etc/apache2/httpd.conf"
+alias ehosts="code /etc/hosts"
+alias evhosts="code /private/etc/apache2/extra/httpd-vhosts.conf"
+alias eapache="code /etc/apache2/httpd.conf"
 
 ###############################################################################
 # System

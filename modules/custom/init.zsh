@@ -14,9 +14,9 @@ export PATH="$PATH:$HOME/.rvm/bin:/usr/local/share/python:/usr/bin/:$HOME/.nvm:$
 # source ~/Projects/z/z.sh
 
 # Exports
-export VISUAL="atom-beta"
-export EDITOR="atom-beta"
-export GIT_EDITOR="atom-beta"
+export VISUAL="code"
+export EDITOR="code"
+export GIT_EDITOR="code"
 
 # https://github.com/LastPass/lastpass-cli#installing-on-os-x
 # needs lastpass-cli for Alfred Workflow
