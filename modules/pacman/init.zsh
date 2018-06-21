@@ -64,7 +64,7 @@ alias pacu="${zpacman_frontend_priv} -Syyu"
 alias pacU="${zpacman_frontend_priv} -U"
 
 # install all packages in current directory
-alias pacd="${zpacman_frontend_priv} -U *.pkg.tar.xz"
+alias pacd="${zpacman_frontend_priv} -U *.pkg.*"
 
 
 #
@@ -126,7 +126,7 @@ alias pacblame="${zpacman_frontend} -Qo"
 #
 
 # source helper functions/aliases
-for helper ( ${zpacman_helper[@]} ); do
+for helper in ${zpacman_helper[@]}; do
   if [[ -s ${0:h}/helper_${helper}.zsh ]]; then
     source ${0:h}/helper_${helper}.zsh
   else
