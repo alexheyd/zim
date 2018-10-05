@@ -85,7 +85,8 @@ alias eapache="code /etc/apache2/httpd.conf"
 ###############################################################################
 
 alias update_os="sudo sh -c \"softwareupdate -ia && reboot\""
-alias serve="python -m SimpleHTTPServer"
+alias pyserve="python -m SimpleHTTPServer"
+alias serve="http-server"
 alias rmdir="rm -rf"
 alias o="open"
 alias oo="open ."
