@@ -24,7 +24,7 @@ alias -s hbs=code
 ###############################################################################
 alias src="source ~/.zshrc"
 alias ealias="code ~/.zim/modules/custom/alias.zsh"
-alias ep="code ~/.zim"
+alias ezim="code ~/.zim"
 alias zim="cd ~/.zim"
 
 ###############################################################################
