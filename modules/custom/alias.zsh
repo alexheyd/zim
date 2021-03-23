@@ -28,23 +28,15 @@ alias ezim="code ~/.zim"
 alias zim="cd ~/.zim"
 
 ###############################################################################
-# (Gaikai Specific)
+# Yarn
 ###############################################################################
-
-# Open Google Chrome with Web Security Disabled
-alias chr="open /Applications/Google\ Chrome.app --args --disable-web-security"
-alias chr2="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --user-data-dir=/Users/alex/Library/Application\ Support/Google/Chrome/Apollo --disable-web-security --allow-file-access-from-files > /dev/null 2>&1 &"
-alias canary="open /Applications/Google\ Chrome\ Canary.app --args --disable-web-security"
-alias sf="cd ~/Sites/swordfish"
-alias sfgk="cd ~/Sites/swordfish/js/lib/gaikai"
-alias gk="cd ~/Sites/gaikai.com"
-# Mount/unmount specific VM folder
-alias mountvm="mkdir /Volumes/GitHub && mount_smbfs //alex@aheyd-pc/GitHub /Volumes/GitHub && code /Volumes/GitHub"
-alias umountvm="umount -f /Volumes/GitHub"
-# Update node_modules and bower_components
-alias ugh="sudo rm -rf node_modules bower_components dist tmp && bower cache clean && npm cache clean && npm i && bower i"
-alias gprd="gco develop && gpl && gco - && git pull --rebase origin develop"
-alias olang="code public/assets/i18n/en-us.json"
+alias yb="yarn build"
+alias ybw="yarn build -w"
+alias yyb="yarn && yarn build-media"
+alias ybm="yarn build-media"
+alias ys="yarn start"
+alias ysw="yarn start:web"
+alias ytu="yarn test -u"
 
 ###############################################################################
 # Atom
@@ -140,7 +132,7 @@ alias gfo="git fetch origin"
 alias gsc="git stash clear"
 alias cbr="git-branch-current"
 alias unstage="git reset"
-alias rollback="git reset --hard"
+alias undo="git reset --hard"
 alias undo1="git reset --soft 'HEAD^'"
 alias undopush="git push -f origin HEAD^:master"
 alias undorebase="git reset --hard ORIG_HEAD"
@@ -173,3 +165,10 @@ alias edr="ember d route"
 # alexheyd.github.io
 ###############################################################################
 alias deploy_gh="ember github-pages:commit --branch master --message \"GitHub Pages update.\""
+
+###############################################################################
+# GitHub CLI
+###############################################################################
+alias ghcr='gh pr list --label "3 / in CODE review"'
+alias ghqa='gh pr list --label "4 / in QA review"'
+alias ghstatus="gh pr status"

@@ -2,10 +2,10 @@
 
 # Usage (prefix and suffix are optional):
 # $ gmybr myFeatureName
-# -> git checkout -b feature/gaikai.ah/$(date)/myFeatureName
+# -> git checkout -b feature/myFeatureName
 # 
 # $ gmybr myFeatureName hotfix
-# -> git checkout -b hotfix/gaikai.ah/$(date)/myFeatureName
+# -> git checkout -b hotfix/myFeatureName
 
 
 if [ -z "$1" ]; then
@@ -15,12 +15,11 @@ fi
 
 local feature_name=$1
 local prefix=$2
-local date=$(date +%Y%m%d)
 
 if [ -z "$2" ]; then
     prefix="feature"
 fi
 
-local branch_name="$prefix/gaikai.ah/$date/$feature_name"
+local branch_name="$prefix/$feature_name"
 
 git checkout -b $branch_name
