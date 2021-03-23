@@ -1,0 +1,15 @@
+# Shorthand to checkout PR branch via GitHub CLI
+
+# Usage:
+# $ ghco 123
+# -> gh pr checkout 123
+
+
+if [ -z "$1" ]; then
+    echo "Error: Issue number required."
+    return
+fi
+
+local issue_number=$1
+
+gh pr checkout $issue_number

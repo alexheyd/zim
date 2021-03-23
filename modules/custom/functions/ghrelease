@@ -1,0 +1,15 @@
+# Shorthand to list release PRs via GitHub CLI
+
+# Usage:
+# $ ghrelease aardvark
+# -> gh pr list --label "release / aardvark"
+
+
+if [ -z "$1" ]; then
+    echo "Error: Release name required."
+    return
+fi
+
+local release_name=$1
+
+gh pr list --label "release / ${release_name}"

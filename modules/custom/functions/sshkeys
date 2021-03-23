@@ -1,0 +1,6 @@
+# Add SSH Keys to ssh-agent
+
+eval "$(ssh-agent -s)"
+ssh-add -K ~/.ssh/id_rsa_wondersauce
+ssh-add -K ~/.ssh/id_rsa_acquia
+ssh-add -K ~/.ssh/id_rsa_wellapp

@@ -1,0 +1,22 @@
+# Shorthand to checkout branch names based on a certain format for ITP tickets
+
+# Usage (prefix and suffix are optional):
+# $ itpco 123
+# -> git checkout feature/itp123
+
+
+if [ -z "$1" ]; then
+    echo "Error: Branch feature name required."
+    return
+fi
+
+local ticket_number=$1
+local prefix=$2
+
+if [ -z "$2" ]; then
+    prefix="feature"
+fi
+
+local branch_name="feature/itp$ticket_number"
+
+git checkout $branch_name

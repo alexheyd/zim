@@ -1,0 +1,15 @@
+# Shorthand to view PR via GitHub CLI
+
+# Usage:
+# $ ghv 123
+# -> gh pr view 123
+
+
+if [ -z "$1" ]; then
+    echo "Error: PR number required."
+    return
+fi
+
+local issue_number=$1
+
+gh pr view $issue_number
